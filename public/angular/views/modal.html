@@ -1,0 +1,621 @@
+<div aria-hidden="true" class="modal fade" data-backdrop="static" data-keyboard="false" id="signInModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content form-elegant" ng-form="userLoginForm">
+            <div class="modal-header text-center">
+                <h3 class="modal-title w-100 dark-grey-text font-weight-bold" id="myModalLabel">
+                    <strong>
+                        Sign in
+                    </strong>
+                </h3>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">
+                        ×
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body mx-4">
+                <div class="form-group">
+                    <label class="u-font-size-90">
+                        Username
+                    </label>
+                    <span class="form-icon-wrapper">
+                        <input class="form-control" name="email" ng-class="{ 'input-error': db.signin.isSubmit && userLoginForm.email.$error.required }" ng-model="db.signin.model.email" placeholder="User Name" required="true" type="text">
+                        </input>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label class="u-font-size-90">
+                        Password
+                    </label>
+                    <span class="form-icon-wrapper">
+                        <input class="form-control" name="password" ng-class="{ 'input-error': db.signin.isSubmit && userLoginForm.password.$error.required }" ng-model="db.signin.model.password" placeholder="password" required="true" type="Password">
+                        </input>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary blue-gradient btn-rounded z-depth-1a btn-block" ng-click="db.signin.Submit(userLoginForm)" ng-disabled="db.signin.isReqSent" type="button">
+                        Sign in
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                        </hr>
+                    </div>
+                    <div class="col-md-12 text-center mb-2">
+                        <a class="blue-text ml-1" ng-click="db.forgat.Open()">
+                            Lost your password?
+                        </a>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <a class="blue-text ml-1" ng-click="db.signup.Open()">
+                            SignUp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" class="modal fade" data-backdrop="static" data-keyboard="false" id="signUpModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" ng-form="signupForm">
+            <div class="modal-header text-center">
+                <h3 class="modal-title w-100 dark-grey-text font-weight-bold" id="myModalLabel">
+                    <strong>
+                        Sign Up
+                    </strong>
+                </h3>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">
+                        ×
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body mx-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Surname
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="surname" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.surname.$error.required }" ng-model="db.signup.model.surname" placeholder="Surname" required="true" type="text">
+                            </input>
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            First Name
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="first_name" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.first_name.$error.required }" ng-model="db.signup.model.first_name" placeholder="First Name" required="true" type="text">
+                            </input>
+                        </span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Last Name
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="last_name" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.last_name.$error.required }" ng-model="db.signup.model.last_name" placeholder="Last Name" required="true" type="text">
+                            </input>
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Username
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="username" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.username.$error.required }" ng-model="db.signup.model.username" placeholder="User Name" required="true" type="text">
+                            </input>
+                        </span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Email Address
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="email" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.email.$error.required }" ng-model="db.signup.model.email" placeholder="Email" type="email">
+                            </input>
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Password
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="password" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.password.$error.required }" ng-model="db.signup.model.password" placeholder="Password" required="true" type="Password">
+                            </input>
+                        </span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Language
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="language" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.language.$error.required }" ng-model="db.signup.model.language" placeholder="Language" required="true" type="text">
+                            </input>
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Contact No
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="contact_no" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.contact_no.$error.required }" ng-model="db.signup.model.contact_no" placeholder="Contact No" required="true" type="Number">
+                            </input>
+                        </span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Address
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="address" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.address.$error.required }" ng-model="db.signup.model.address" placeholder="Address" required="true" type="text">
+                            </input>
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Remember Token
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="remember_token" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.remember_token.$error.required }" ng-model="db.signup.model.remember_token" placeholder="Remember Token" type="text">
+                            </input>
+                        </span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Select Business
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="business_id" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.business_id.$error.required }" ng-model="db.signup.model.business_id" placeholder="Select Business" required="true" type="text">
+                            </input>
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Is Cmmsn Agnt
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="is_cmmsn_agnt" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.is_cmmsn_agnt.$error.required }" ng-model="db.signup.model.is_cmmsn_agnt" placeholder="Is Cmmsn Agnt" type="text">
+                            </input>
+                        </span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Cmmsn Percent
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="cmmsn_percent" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.cmmsn_percent.$error.required }" ng-model="db.signup.model.cmmsn_percent" placeholder="Cmmsn Percent" type="Number">
+                            </input>
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="u-font-size-90">
+                            Selected Contacts
+                        </label>
+                        <span class="form-icon-wrapper">
+                            <input class="form-control" name="selected_contactssurname" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.selected_contacts.$error.required }" ng-model="db.signup.model.selected_contacts" placeholder="Selected Contacts" type="text">
+                            </input>
+                        </span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12 text-center">
+                        <button class="btn btn-primary blue-gradient btn-rounded z-depth-1a" ng-click="db.signup.Submit(signupForm)" ng-disabled="db.signup.isReqSent" type="button">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" class="modal fade" data-backdrop="static" data-keyboard="false" id="forgotpassModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content form-elegant">
+            <!--Header-->
+            <div class="modal-header text-center">
+                <h3 class="modal-title w-100 dark-grey-text font-weight-bold" id="myModalLabel">
+                    <strong>
+                        Forgot Password
+                    </strong>
+                </h3>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">
+                        ×
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="u-font-size-90" for="inputRightIcon">
+                        Username or Email Address
+                    </label>
+                    <span class="form-icon-wrapper">
+                        <input aria-describedby="emailHelp" class="form-control form-icon-input-right" placeholder="Email" type="email">
+                        </input>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <button class="btn btn-primary blue-gradient btn-rounded z-depth-1a btn-block" type="button">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" class="modal fade" data-backdrop="static" data-keyboard="false" id="accountModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content form-elegant" ng-form="trialaccForm">
+            <div class="modal-header text-center">
+                <h3 class="modal-title w-100 dark-grey-text font-weight-bold">
+                    <strong>
+                        Create Your Account
+                    </strong>
+                </h3>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">
+                        ×
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="stepui">
+                            <span class="badge badge-secondary ic-badge active" ng-class="{ 'active': db.account.stepObj.step1 }">Step 1</span>
+                            <span class="badge badge-secondary ic-badge" ng-class="{ 'active': db.account.stepObj.step2 }">Step 2</span>
+                            <span class="badge badge-secondary ic-badge" ng-class="{ 'active': db.account.stepObj.step3 }">Step 3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 tab-content mt-4">
+                        <div class="tab-pane" id="step1" role="tabpanel" ng-form="step1Form" ng-class="{'active': db.account.stepObj.step1 && !db.account.stepObj.step2 && !db.account.stepObj.step3}">
+                            <div class="form-group">
+                                <label class="u-font-size-90" for="inputRightIcon">
+                                    Email                                      
+                                </label>
+                                <span class="required">*</span>
+                                <span class="form-icon-wrapper">
+                                    <input class="form-control form-icon-input-right" ng-model="db.account.model.email" placeholder="Email" type="email" required="true" name="email">
+                                </span>
+                            </div>
+                            <ul class="list-inline pull-xs-right text-right">
+                                <li class="list-inline-item">
+                                    <button class="btn btn-outline-primary next-step" type="button" ng-click="db.account.step1()" ng-disabled="!step1Form.$valid" data-toggle="tab" role="tab">
+                                        CONTINUIE TO PROTECT YOUR BAND
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="step2" role="tabpanel" ng-class="{'active': db.account.stepObj.step2 && db.account.stepObj.step1 && !db.account.stepObj.step3}" ng-form="step2Form">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            Main Store Name ( Company Name)
+                                        </label>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="mainstcomnm" ng-model="db.account.model.mainstcomnm" placeholder="Main Store Name ( Company Name)" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            First Name
+                                        </label>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="mainstfirstnm" ng-model="db.account.model.mainstfirstnm" placeholder="First Name" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            Last Name
+                                        </label>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="mainstlastnm" ng-model="db.account.model.mainstlastnm" placeholder="Last Name" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            Password
+                                        </label>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="mainstpass" ng-model="db.account.model.mainstpass" placeholder="Password" required="true" type="password">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            Phone Number
+                                        </label>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="mainstphone" ng-model="db.account.model.mainstphone" placeholder="Phone Number" required="true" type="Number">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            Automatics Location loading GEO LONG AND LAT
+                                        </label>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="mainstlatlong" ng-model="db.account.model.mainstlatlong" placeholder="Automatics Location loading GEO LONG AND LAT" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            Address
+                                        </label>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="mainstadd" ng-model="db.account.model.mainstadd" placeholder="Address" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            City
+                                        </label>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="mainstcity" ng-model="db.account.model.mainstcity" placeholder="City" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            State
+                                        </label>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="mainststate" ng-model="db.account.model.mainststate" placeholder="State" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            Zipcode
+                                        </label>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="mainstzipcode" ng-model="db.account.model.mainstzipcode" placeholder="Zipcode" required="true" type="Number">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            Country
+                                        </label>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="mainstcountry" ng-class="{ 'input-error': db.account.isSubmit && trialaccForm.mainstcountry.$error.required }" ng-model="db.account.model.mainstcountry" placeholder="Country" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="pull-xs-right text-right">
+                                <li class="list-inline-item">
+                                    <button class="btn btn-outline-primary prev-step" type="button" ng-click="db.account.backStep('step2')">
+                                       PREVIOUS
+                                    </button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button class="btn btn-outline-primary next-step" type="button" ng-click="db.account.step2()" ng-disabled="!step2Form.$valid">
+                                       CONTINUIE TO
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="step3" ng-form="step3Form" role="tabpanel" ng-class="{'active': db.account.stepObj.step3 && db.account.stepObj.step1 && db.account.stepObj.step2}">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            How many brand Store in your Company
+                                        </label>
+                                        <span class="required">*</span>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" ng-model="db.account.model.totstore" placeholder="How many brand Store in your Company" type="text">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary" id="button-addon2" ng-click="db.account.addStore(db.account.model.totstore)" type="button">
+                                                        Add
+                                                    </button>
+                                                </div>
+                                            </input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" ng-repeat="personalDetail in personalDetails">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <h5 class="u-font-size-90">
+                                            Store Name  {{$index + 1}}
+                                        </h5>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="storename" ng-model="personalDetail.storename" placeholder="Store Name" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            LAT
+                                        </label>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="lat" ng-model="personalDetail.lat" placeholder="Lat" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            LONG
+                                        </label>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="long" ng-model="personalDetail.long" placeholder="Long" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            Address
+                                        </label>
+                                        <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="address" ng-model="personalDetail.address" placeholder="Address" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            City
+                                        </label>
+                                          <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="city" ng-model="personalDetail.city" placeholder="City" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            State
+                                        </label>
+                                          <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="state" ng-model="personalDetail.state" placeholder="State" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            Zipcode
+                                        </label>
+                                          <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="zipcode" ng-model="personalDetail.zipcode" placeholder="Zipcode" required="true" type="Number">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="u-font-size-90">
+                                            Country
+                                        </label>
+                                          <span class="required">*</span>
+                                        <span class="form-icon-wrapper">
+                                            <input class="form-control" name="country" ng-model="personalDetail.country" placeholder="Country" required="true" type="text">
+                                            </input>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <b>
+                                            Note:
+                                        </b>
+                                        Bussines will have >=1 Store, If busisess have 100 store need fill out 100 store Later if business login to store to scan chip or upload chip NFC/QRcode then system only Allow user login have GEO already have on the system.
+                                    </p>
+                                </div>
+                            </div>
+                            <ul class="list-inline pull-xs-right text-right">
+                                <li class="list-inline-item">
+                                    <button class="btn btn-outline-primary prev-step" type="button" ng-click="db.account.backStep('step3')">
+                                        PREVIOUS
+                                    </button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button class="btn btn-outline-primary btn-info-full next-step" type="button" ng-click="db.account.submit(trialaccForm)" ng-disabled="!step3Form.$valid">
+                                        SUBMIT
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

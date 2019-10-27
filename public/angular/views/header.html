@@ -1,0 +1,54 @@
+<header class="fixed-top" id="header">
+    <div class="container">
+        <div class="logo float-left">
+            <a class="scrollto" href="#intro">
+                <img alt="" class="img-fluid" src="../assets/img/logo.png"/>
+            </a>
+         </div>
+        <nav class="main-nav float-right d-none d-lg-block">
+            <ul class="nav-menu">
+                <li ng-class="{'menu-active': g.activeSection == 'intro'}">
+                    <a href="#" ng-click="comnObj1.getSection('intro')">
+                        HOME
+                    </a>
+                </li>
+                <li ng-class="{'menu-active': g.activeSection == 'solutions'}">
+                    <a href="#" ng-click="comnObj1.getSection('solutions')">
+                        SOLUTIONS
+                    </a>
+                </li>
+                <li ng-class="{'menu-active': g.activeSection == 'markets'}">
+                    <a href="#" ng-click="comnObj1.getSection('markets')">
+                        MARKETS
+                    </a>
+                </li>
+                <li ng-class="{'menu-active': g.activeSection == 'company'}">
+                    <a href="#" ng-click="comnObj1.getSection('company')">
+                        COMPANY
+                    </a>
+                </li>
+                <li ng-class="{'menu-active': g.activeSection == 'application'}">
+                    <a href="#" ng-click="comnObj1.getSection('application')">
+                        APP
+                    </a>
+                </li>
+                <li ng-class="{'menu-active': g.activeSection == 'news'}">
+                    <a href="#" ng-click="comnObj1.getSection('news')">
+                        NEWS
+                    </a>
+                </li>
+                <li ng-class="{'menu-active': g.activeSection == 'signInModal'}" ng-if="!g.loggedUser._id">
+                    <a data-toggle="modal" data-target="#signInModal">
+                        PARTNER LOGIN
+                    </a>
+                </li>
+                <li ng-if="g.loggedUser._id">
+                    <a>
+                        <span>{{g.loggedUser.first_name}} {{g.loggedUser.last_name}}</span>
+                        <span ng-click="g.logout()" class="text-danger"><i class="fa fa-sign-out ml-2" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Best Sky America</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="keywords" content="Live-eleno">
+        <meta name="description" content="Live-eleno">
+        <meta name="author" content="Live-eleno">
+        <meta content="text/html;charset=utf-8" http-equiv="Content-type">
+        <meta content="notranslate" name="google">
+        <base href="/">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <!-- Web Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href="iccaches/final.min.css">
+
+        <link href="../libs/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="../assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <script src="/iccaches/script-1.min.js" type="text/javascript"></script>
+
+        <!-- <script src="/iccaches/script-2.min.js" type="text/javascript"></script>-->
+        <script src="angular/routes/icMean.js" type="text/javascript"></script>
+        <script src="angular/config/config.js" type="text/javascript"></script>
+        <script src="angular/controllers/common.js" type="text/javascript"></script>
+        <script src="angular/controllers/dashboard.js" type="text/javascript"></script>
+        <script src="angular/controllers/userAccount.js" type="text/javascript"></script>
+        <script src="angular/services/icMean.js" type="text/javascript"></script>
+
+ 
+
+        <!--Carousel style -->
+        <style type="text/css">
+        .carousel-3d-container figure {
+          margin:0;
+        }
+
+        .carousel-3d-container figcaption {
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          bottom: 0;
+          position: absolute;
+          bottom: 0;
+          padding: 15px;
+          font-size: 12px;
+          min-width: 100%;
+          box-sizing: border-box;
+        }
+        </style>
+    </head>
+
+
+    <body class="app ic-body" id="app" ng-controller="CommonController">
+        <style media="screen">
+            #front-spinner-bx {
+                background-color: white;
+                height: 100vh;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width:100%;
+                z-index: 102938;
+                display: table;
+            }
+            .fs-spin {
+                text-align: center;
+                display: table-cell;
+                height: 100%;
+                vertical-align: middle;
+            }
+            .fs-spin h5 {
+                color: #23c5ea;
+                margin-top: 10px;
+            }
+            .body-main-cn {
+                display: none;
+            }
+            a:hover {
+                cursor:pointer;
+            }
+        </style>
+        <toaster-container toaster-options="{'time-out': 7000}"></toaster-container>
+        <div id="front-spinner-bx">
+            <div class="fs-spin">
+                <img height="60" src="/svg-loaders/rings.svg"></img>
+            </div>
+        </div>
+        <div ng-include="'angular/views/header.html'">
+        </div>
+
+        <section class="body-main-cn">
+            <div ui-view="">
+            </div>
+        </section>
+
+        <div ng-include="'angular/views/footer.html'">
+        </div>
+    </body>
+</html>

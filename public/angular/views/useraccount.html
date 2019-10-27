@@ -1,0 +1,739 @@
+<style type="text/css">
+    body {
+  background: #F1F3FA;
+}
+
+/* Profile container */
+.sidemenu
+{
+/*color: #00ccff !important;*/
+font-size: 18px;
+}
+
+.profile {
+  margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: #00ccff;
+}
+
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;profile
+  margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+    
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 460px;
+}
+a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, td, textarea, th, ul {
+    -webkit-border-radius: 0!important;
+    -moz-border-radius: 0!important;
+    border-radius: 0!important;
+}
+.dashboard-stat, .portlet {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.portlet {
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    border-radius: 4px;
+}
+.portlet.bordered {
+    border-left: 2px solid #e6e9ec!important;
+}
+.portlet.light {
+    padding: 12px 20px 15px;
+    background-color: #fff;
+}
+.portlet.light.bordered {
+    border: 1px solid #e7ecf1!important;
+}
+.list-separated {color: #00ccff !important;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.profile-stat {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f4f7;
+}
+.profile-stat-title {
+    color: #7f90a4;
+    font-size: 25px;
+    text-align: center;
+}
+.uppercase {text/css
+    text-transform: uppercase!important;
+}
+
+.profile-stat-text {
+    color: #5b9bd1;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+.profile-desc-title {
+    color: #7f90a4;color: #00ccff !important;
+    font-size: 17px;
+    font-weight: 600;
+}
+.profile-desc-text {
+    color: #7e8c9e;
+    font-size: 14px;
+}
+.margin-top-20 {
+    margin-top: 20px!important;
+}
+[class*=" fa-"]:not(.fa-stack), [class*=" glyphicon-"], [class*=" icon-"], [class^=fa-]:not(.fa-stack), [class^=glyphicon-], [class^=icon-] {
+    display: inline-block;
+    line-height: 14px;
+    -webkit-font-smoothing: antialiased;
+}
+.profile-desc-link i {
+    width: 22px;
+    font-size: 19px;
+    color: #abb6c4;
+    margin-right: 5px;
+}
+</style>
+<section class="main-section mt-5 pt-5" ng-controller="UserAccountController" ng-init="" style="min-height: 100vh">
+    <main id="main">
+        <div class="container-fluid">
+            <div class="row home">
+                <div class="col-md-12">
+                    <div class="shadow rounded text-center">
+                        <h2 class="pt-3 welcome">
+                            WELLCOME TO
+                        </h2>
+                        <h3 class="pt-3 welcome1">
+                            PLATFORM ANTI-COUNTERFEITING OF JEPTAGS USA AI, BLOCKCHAIN,
+                        </h3>
+                        <h5 class="pt-3 pb-3 welcome2">
+                            Please contact to our agent in your country to receipt chip Free for DEMO
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="profile-sidebar">
+                        <div class="profile-userpic text-center">
+                            <img class="img-responsive" src="assets/img/default-logo.png">
+                            </img>
+                        </div>
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name">
+                                <h4>
+                                    {{g.loggedUser.first_name}} {{g.loggedUser.last_name}}
+                                </h4>
+                            </div>
+                            <div class="profile-usertitle-job">
+                                <span class="badge badge-success p-2" style="font-size: 14px;">
+                                    Seller
+                                </span>
+                            </div>
+                            <div class="profile-usertitle-name">
+                                {{g.loggedUser.email}}
+                            </div>
+                        </div>
+                        <div class="portlet light bordered mt-5">
+                            <h5 class="text-center">
+                                <b>
+                                    Overview
+                                </b>
+                            </h5>
+                            <div class="row list-separated">
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <div class="uppercase profile-stat-title">
+                                        120
+                                    </div>
+                                    <div class="uppercase profile-stat-text">
+                                        Products
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <div class="uppercase profile-stat-title">
+                                        600
+                                    </div>
+                                    <div class="uppercase profile-stat-text">
+                                        Selling
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <div class="uppercase profile-stat-title">
+                                        90
+                                    </div>
+                                    <div class="uppercase profile-stat-text">
+                                        Uploads
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                                <!-- END STAT -->
+                                <div>                                  
+                                    <div class="margin-top-20">
+                                        <h5 class="text-center">
+                                            <b>
+                                                Jeptags Authentic
+                                            </b>
+                                        </h5>
+                                    </div>
+                                        <div class="margin-top-20 sidemenu">
+                                            <a href="https://www.facebook.com/">
+                                                <i aria-hidden="true" class="fa fa-home">
+                                                </i>
+                                                Home
+                                            </a>
+                                        </div>
+                                        <div class="margin-top-20 sidemenu">
+                                            <a href="https://www.facebook.com/">
+                                                <i aria-hidden="true" class="fa fa-university">
+                                                </i>
+                                                View Store
+                                            </a>
+                                        </div>
+                                        <div class="margin-top-20 sidemenu">
+                                            <a href="https://www.facebook.com/">
+                                                <i aria-hidden="true" class="fa fa-product-hunt">
+                                                </i>
+                                                Product
+                                            </a>
+                                        </div>
+                                        <div class="margin-top-20 sidemenu">
+                                            <a href="https://www.facebook.com/">
+                                                <i aria-hidden="true" class="fa fa-list">
+                                                </i>
+                                                Category
+                                            </a>
+                                        </div>
+                                        <div class="margin-top-20 sidemenu">
+                                            <a href="https://www.facebook.com/">
+                                                <i aria-hidden="true" class="fa fa-cogs">
+                                                </i>
+                                                Store Setup
+                                            </a>
+                                        </div>
+                                    </hr>
+                                </div>
+                            </hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="profile-content">
+                        <div class="page-holder w-100 d-flex flex-wrap">
+                            <div class="container-fluid">
+                                <section class="mt-5">
+                                    <div class="row mb-4">
+                                        <div class="col-lg-12 mb-4 mb-lg-0">
+                                            <div class="card">
+                                                <div class="card-header p-3">
+                                                    <h2 class="h6 text-uppercase mb-0">
+                                                        <span>
+                                                            Stores
+                                                        </span>
+                                                        <span class="float-right pointer">
+                                                            <i aria-hidden="true" class="fa fa-plus-square">
+                                                            </i>
+                                                        </span>
+                                                    </h2>
+                                                </div>
+                                                <div class="card-body account pt-2">
+                                                    <div class="row mt-2">
+                                                        <table class="table table-striped card-text">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="border-top-0">
+                                                                        #
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Store Name
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Address
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        City
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        State
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Country
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Zipcode
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Action
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">
+                                                                        1
+                                                                    </th>
+                                                                    <td>
+                                                                        Shoes Store
+                                                                    </td>
+                                                                    <td>
+                                                                        Near Busstand
+                                                                    </td>
+                                                                    <td>
+                                                                        Rajkot
+                                                                    </td>
+                                                                    <td>
+                                                                        Gujarat
+                                                                    </td>
+                                                                    <td>
+                                                                        India
+                                                                    </td>
+                                                                    <td>
+                                                                        360005
+                                                                    </td>
+                                                                    <td>
+                                                                        <i aria-hidden="true" class="fa fa-pencil-square pointer mr-2">
+                                                                        </i>
+                                                                        <i class="fa fa-trash pointer">
+                                                                        </i>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="mt-5">
+                                    <div class="row mb-4">
+                                        <div class="col-lg-12 mb-4 mb-lg-0">
+                                            <div class="card">
+                                                <div class="card-header p-3">
+                                                    <h2 class="h6 text-uppercase mb-0">
+                                                        <span>
+                                                            Product
+                                                        </span>
+                                                        <span class="float-right pointer">
+                                                            <i aria-hidden="true" class="fa fa-plus-square">
+                                                            </i>
+                                                        </span>
+                                                    </h2>
+                                                </div>
+                                                <div class="card-body account pt-2">
+                                                    <div class="row mt-2">
+                                                        <table class="table table-striped card-text">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="border-top-0">
+                                                                        #
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Product Name
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Business Name
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Product Type
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Brand
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Category
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Action
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">
+                                                                        1
+                                                                    </th>
+                                                                    <td>
+                                                                        Nike Sport
+                                                                    </td>
+                                                                    <td>
+                                                                        Business 1
+                                                                    </td>
+                                                                    <td>
+                                                                        Single
+                                                                    </td>
+                                                                    <td>
+                                                                        Nike
+                                                                    </td>
+                                                                    <td>
+                                                                        Shoes
+                                                                    </td>
+                                                                    <td>
+                                                                        <i aria-hidden="true" class="fa fa-pencil-square pointer mr-2">
+                                                                        </i>
+                                                                        <i class="fa fa-trash pointer">
+                                                                        </i>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">
+                                                                        2
+                                                                    </th>
+                                                                    <td>
+                                                                        Reebok Running
+                                                                    </td>
+                                                                    <td>
+                                                                        Business 2
+                                                                    </td>
+                                                                    <td>
+                                                                        Modifier
+                                                                    </td>
+                                                                    <td>
+                                                                        Rebook
+                                                                    </td>
+                                                                    <td>
+                                                                        Shoes
+                                                                    </td>
+                                                                    <td>
+                                                                        <i aria-hidden="true" class="fa fa-pencil-square pointer mr-2">
+                                                                        </i>
+                                                                        <i class="fa fa-trash pointer">
+                                                                        </i>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="mt-5">
+                                    <div class="row mb-4">
+                                        <div class="col-lg-12 mb-4 mb-lg-0">
+                                            <div class="card">
+                                                <div class="card-header p-3">
+                                                    <h2 class="h6 text-uppercase mb-0">
+                                                        <span>
+                                                            Category
+                                                        </span>
+                                                        <span class="float-right pointer">
+                                                            <i aria-hidden="true" class="fa fa-plus-square">
+                                                            </i>
+                                                        </span>
+                                                    </h2>
+                                                </div>
+                                                <div class="card-body account pt-2">
+                                                    <div class="row mt-2">
+                                                        <table class="table table-striped card-text">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="border-top-0">
+                                                                        #
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Category Name
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Bussiness Name
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Short Code
+                                                                    </th>
+                                                                    <th class="border-top-0">
+                                                                        Action
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">
+                                                                        1
+                                                                    </th>
+                                                                    <td>
+                                                                        Shoes
+                                                                    </td>
+                                                                    <td>
+                                                                        Business 1
+                                                                    </td>
+                                                                    <td>
+                                                                        SH
+                                                                    </td>
+                                                                    <td>
+                                                                        <i aria-hidden="true" class="fa fa-pencil-square pointer mr-2">
+                                                                        </i>
+                                                                        <i class="fa fa-trash pointer">
+                                                                        </i>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">
+                                                                        2
+                                                                    </th>
+                                                                    <td>
+                                                                        Cloth
+                                                                    </td>
+                                                                    <td>
+                                                                        Business 2
+                                                                    </td>
+                                                                    <td>
+                                                                        CL
+                                                                    </td>
+                                                                    <td>
+                                                                        <i aria-hidden="true" class="fa fa-pencil-square pointer mr-2">
+                                                                        </i>
+                                                                        <i class="fa fa-trash pointer">
+                                                                        </i>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="mt-5">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h3>
+                                                Store Setup
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 1
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="surname" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.surname.$error.required }" ng-model="db.signup.model.surname" placeholder="Field 1" required="true" type="text">
+                                                </input>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 2
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="first_name" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.first_name.$error.required }" ng-model="db.signup.model.first_name" placeholder="Field 2" required="true" type="text">
+                                                </input>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 3
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="lastname" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.lastname.$error.required }" ng-model="db.signup.model.last_name" placeholder="Field 3" required="true" type="text">
+                                                </input>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 4
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="username" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.username.$error.required }" ng-model="db.signup.model.username" placeholder="Field 4" required="true" type="text">
+                                                </input>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 5
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="email" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.email.$error.required }" ng-model="db.signup.model.email" placeholder="Field 5" type="email">
+                                                </input>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 6
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="password" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.password.$error.required }" ng-model="db.signup.model.password" placeholder="Field 6" required="true" type="Password">
+                                                </input>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 7
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="language" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.language.$error.required }" ng-model="db.signup.model.language" placeholder="Field 7" required="true" type="text">
+                                                </input>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 8
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="contact_no" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.contact_no.$error.required }" ng-model="db.signup.model.contact_no" placeholder="Field 8" required="true" type="Number">
+                                                </input>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 9
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="address" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.address.$error.required }" ng-model="db.signup.model.address" placeholder="Field 9" required="true" type="text">
+                                                </input>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 10
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="remember_token" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.remember_token.$error.required }" ng-model="db.signup.model.remember_token" placeholder="Field 10" type="text">
+                                                </input>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 11
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="cmmsn_percent" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.cmmsn_percent.$error.required }" ng-model="db.signup.model.cmmsn_percent" placeholder="Field 11" type="Number">
+                                                </input>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="u-font-size-90">
+                                                Field 12
+                                            </label>
+                                            <span class="form-icon-wrapper">
+                                                <input class="form-control" name="selected_contactssurname" ng-class="{ 'input-error': db.signup.isSubmit && signupForm.selected_contacts.$error.required }" ng-model="db.signup.model.selected_contacts" placeholder="Field 12" type="text">
+                                                </input>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-12 text-center">
+                                            <button class="btn btn-primary blue-gradient btn-rounded z-depth-1a" ng-click="db.signup.Submit(signupForm)" ng-disabled="db.signup.isReqSent" type="button">
+                                                Setup
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <a class="back-to-top" href="#">
+        <i class="fa fa-chevron-up">
+        </i>
+    </a>
+    <div ng-include="'angular/views/modal.html'">
+    </div>
+</section>
